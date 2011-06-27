@@ -1,0 +1,24 @@
+%html
+	%head
+		%title Dan's Minecraft Server Status
+		%script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'}
+		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheet.css'}
+		:javascript
+			$(document).ready(function() {
+				$('#start_server').submit(function() {
+					$.get($(this).attr('action'), $(this).serialize(), function(data){
+						$('#start_server_button').replaceWith("<p>" + data + "</p>");
+					}, "text");
+					return false;
+				});
+			});
+	%body
+		%h2 Server Status
+		#server_status
+			%strong= @state
+			- if @state == "stopped"
+				%br
+				%br
+				%form#start_server{:action => '/start_server'}
+					#start_server_button
+						%a.button{:href => '#', :onclick => "$('#start_server').submit(); return false"} Start server
