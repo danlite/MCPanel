@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'aws'
 require 'haml'
+require 'sass'
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
   username == 'mcpanel' and password == ENV['MCPANEL_AUTH_PASSWORD']
