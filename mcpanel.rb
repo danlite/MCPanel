@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'aws'
+require 'aws/ec2'
 require 'haml'
 require 'sass'
 
