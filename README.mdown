@@ -1,0 +1,15 @@
+Required environment variables
+------------------------------
+
+- `AWS_KEY` - Your AWS Access Key ID
+- `AWS_SECRET` - Your AWS Secret Access Key
+- `MC_EC2_INSTANCE_ID` - Instance ID of the EC2 instance which is running Minecraft
+- `MCPANEL_AUTH_PASSWORD` - Password to allow access to the web interface
+
+Using the web interface
+-----------------------
+
+Once you have MCPanel running on Heroku, point your browser to the URL (e.g. mymcpanel.heroku.com) and it will prompt you to log in.
+The username is mcpanel and the password is what you specified as the `MCPANEL_AUTH_PASSWORD` environment variable.
+Currently the interface is very sparse, only providing the current status of the EC2 instance and, if it is "stopped", a button to start the instance.
+In fact, at this point there are no Minecraft-specific features and could be used for any generic EC2 instance.
