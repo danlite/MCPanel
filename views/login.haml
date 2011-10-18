@@ -1,0 +1,10 @@
+%html
+	%head
+		%title Minecraft Server Status
+		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheet.css'}
+	%body
+		%h2 Log In
+		%form{:method => 'post'}
+			%label{:for => 'password'}
+			%input#password{:type => 'password', :name => 'password'}
+			%input{:type => 'submit', :value => 'Submit'}
