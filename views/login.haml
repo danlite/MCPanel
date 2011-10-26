@@ -2,9 +2,15 @@
 	%head
 		%title Minecraft Server Status
 		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheet.css'}
+		%script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'}
 	%body
 		%h2 Log In
 		%form{:method => 'post'}
 			%label{:for => 'password'}
 			%input#password{:type => 'password', :name => 'password'}
 			%input{:type => 'submit', :value => 'Submit'}
+		:javascript
+			$(document).ready(function(){
+				$('#password').focus();
+			})
+		
